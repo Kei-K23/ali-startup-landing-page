@@ -5,8 +5,9 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "AI Startup Landing Page",
-  description: "A landing page for an AI startup created with Frontend Tribe",
+  title: "Ali",
+  description:
+    "A landing page for an Ali startup company created by Kei-K23 with NextJS, TailwindCSS and Framer-motion",
 };
 
 export default function RootLayout({
@@ -17,7 +18,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>{children}</body>
-      </body>
     </html>
   );
 }

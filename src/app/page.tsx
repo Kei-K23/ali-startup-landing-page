@@ -1,3 +1,9 @@
+import { Header } from "@/sections/Header";
+
 export default function Home() {
-  return <div>Hello world</div>;
+  return (
+    <main className="bg-neutral-900 h-full">
+      <Header />
+    </main>
+  );
 }
