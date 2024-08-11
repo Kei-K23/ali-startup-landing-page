@@ -10,11 +10,30 @@ export default function HamburgerMenu({
 }) {
   const [isClient, setIsClient] = useState(false);
   const { isOpen, onClose } = useHamburgerOverlay();
-
   useEffect(() => {
     setIsClient(true);
-  }, []);
 
+    // Disable scrolling and prevent text selection when overlay is open
+    if (isOpen) {
+      document.body.classList.add("overflow-hidden", "select-none");
+
+      // Add keydown event listener to close on ESC
+      const handleEsc = (event: KeyboardEvent) => {
+        if (event.key === "Escape") {
+          onClose();
+        }
+      };
+      document.addEventListener("keydown", handleEsc);
+
+      // Clean up on unmount
+      return () => {
+        document.body.classList.remove("overflow-hidden", "select-none");
+        document.removeEventListener("keydown", handleEsc);
+      };
+    } else {
+      document.body.classList.remove("overflow-hidden", "select-none");
+    }
+  }, [isOpen]);
   if (!isClient) {
     return;
   }
