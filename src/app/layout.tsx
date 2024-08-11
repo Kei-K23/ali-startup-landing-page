@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/sections/Header";
+import HamburgerMenu from "@/components/HamburgerMenu";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,8 +20,10 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className={inter.className}>
-        <Header />
-        {children}
+        <HamburgerMenu>
+          <Header />
+          {children}
+        </HamburgerMenu>
       </body>
     </html>
   );

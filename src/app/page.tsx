@@ -1,3 +1,4 @@
+import HamburgerMenu from "@/components/HamburgerMenu";
 import { CallToAction } from "@/sections/CallToAction";
 import { Features } from "@/sections/Features";
 import { Footer } from "@/sections/Footer";
@@ -7,7 +8,7 @@ import { Testimonials } from "@/sections/Testimonials";
 
 export default function Home() {
   return (
-    <main className="bg-neutral-900 h-full">
+    <main className="bg-neutral-900 h-full relative">
       <Hero />
       <LogoTicker />
       <Features />

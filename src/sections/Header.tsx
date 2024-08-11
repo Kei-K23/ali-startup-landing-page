@@ -1,8 +1,11 @@
+"use client";
 import LogoIcon from "@/assets/logo.svg";
-import MenuIcon from "@/assets/icon-menu.svg";
 import Button from "@/components/Button";
+import MenuIcon from "@/assets/icon-menu.svg";
+import { useHamburgerOverlay } from "../../store/use-hamburger-overlay";
 
 export const Header = () => {
+  const { onOpen } = useHamburgerOverlay();
   return (
     <header className="py-4 border-b border-white/15 md:border-none fixed w-full top-0 z-10">
       <div className="absolute inset-0 backdrop-blur -z-10 md:hidden" />
@@ -44,7 +47,9 @@ export const Header = () => {
           </nav>
           <div className="flex gap-x-4 items-center">
             <Button>Join waitlist</Button>
-            <MenuIcon className="size-8 block md:hidden" />
+            <button onClick={() => onOpen()}>
+              <MenuIcon className="size-8 block md:hidden" />
+            </button>
           </div>
         </div>
       </div>
