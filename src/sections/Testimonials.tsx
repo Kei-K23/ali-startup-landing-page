@@ -3,7 +3,7 @@ import TestimonialCard from "@/components/TestimonialCard";
 
 export const Testimonials = () => {
   return (
-    <section className="py-20 md:py-24">
+    <section id="testimonials" className="py-20 md:py-24">
       <div className="container">
         <h2 className="text-2xl md:text-4xl font-bold text-center">
           Beyond Expectations.

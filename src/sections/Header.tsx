@@ -37,10 +37,10 @@ export const Header = () => {
               Testimonials
             </a>
             <a
-              href="#"
+              href="#actions"
               className="hover:text-white text-white/70 transition-all"
             >
-              Changelog
+              Actions
             </a>
           </nav>
           <div className="flex gap-x-4 items-center">
