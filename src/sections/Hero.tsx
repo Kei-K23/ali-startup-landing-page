@@ -5,6 +5,7 @@ import GlobeContent from "@/components/GlobeContent";
 export const Hero = () => {
   return (
     <section
+      id="home"
       className="relative h-[492px] md:h-[800px] flex items-center overflow-hidden [mask-image:linear-gradient(to_bottom,transparent,black_18%,black_90%,transparent)]"
       style={{
         backgroundImage: `url(${starBg.src})`,

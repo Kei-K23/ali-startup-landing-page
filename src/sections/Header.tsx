@@ -5,36 +5,36 @@ import Button from "@/components/Button";
 
 export const Header = () => {
   return (
-    <header className="py-4 border-b border-white/15 md:border-none sticky top-0 z-10">
+    <header className="py-4 border-b border-white/15 md:border-none fixed w-full top-0 z-10">
       <div className="absolute inset-0 backdrop-blur -z-10 md:hidden" />
       <div className="container">
         <div className="relative flex justify-between items-center md:border md:border-white/15 md:p-2.5 md:rounded-xl mx-auto max-w-2xl">
           <div className="absolute inset-0 backdrop-blur -z-10 hidden md:block" />
-          <Link
-            href={"/"}
+          <a
+            href={"#home"}
             className="size-10 border rounded-lg inline-flex justify-center items-center border-white/15"
           >
             <LogoIcon className="size-8" />
-          </Link>
+          </a>
 
           <nav className="gap-8 hidden md:flex">
             <a
-              href="#"
+              href="#partners"
+              className="hover:text-white text-white/70 transition-all"
+            >
+              Partners
+            </a>
+            <a
+              href="#feature"
               className="hover:text-white text-white/70 transition-all"
             >
               Feature
             </a>
             <a
-              href="#"
+              href="#testimonials"
               className="hover:text-white text-white/70 transition-all"
             >
-              Developers
-            </a>
-            <a
-              href="#"
-              className="hover:text-white text-white/70 transition-all"
-            >
-              Pricing
+              Testimonials
             </a>
             <a
               href="#"

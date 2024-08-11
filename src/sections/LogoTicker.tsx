@@ -1,9 +1,8 @@
-import Image from "next/image";
 import { LOGOS } from "../../constants";
 
 export const LogoTicker = () => {
   return (
-    <section className="py-20 md:py-24">
+    <section id="partners" className="py-20 md:py-24">
       <div className="container">
         <div className="flex items-center flex-col">
           <h2 className="text-2xl md:text-4xl font-bold text-center">

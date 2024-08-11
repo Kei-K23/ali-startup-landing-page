@@ -6,7 +6,7 @@ import productImg from "@/assets/product-image.png";
 
 export const Features = () => {
   return (
-    <section className="py-20 md:py-24">
+    <section id="feature" className="py-20 md:py-24">
       <div className="container">
         <h2 className="text-2xl md:text-4xl font-bold text-center">
           Elevate your SEO efforts
