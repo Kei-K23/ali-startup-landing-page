@@ -5,9 +5,9 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Ali",
+  title: "Ali AI",
   description:
-    "A landing page for an Ali startup company created by Kei-K23 with NextJS, TailwindCSS and Framer-motion",
+    "A landing page for Ali AI startup company created by Kei-K23 with NextJS, TailwindCSS and Framer-motion",
 };
 
 export default function RootLayout({
