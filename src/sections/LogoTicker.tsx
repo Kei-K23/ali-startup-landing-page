@@ -12,12 +12,10 @@ export const LogoTicker = () => {
           <div className="flex-1 overflow-x-hidden [mask-image:linear-gradient(to_right,transparent,black_20%,black_80%,transparent)]">
             <div className="flex flex-none gap-14">
               {LOGOS.map((logo) => (
-                <Image
+                <img
                   key={logo.src}
                   src={logo.src}
                   alt={logo.src}
-                  width={24}
-                  height={24}
                   className="h-6 w-auto"
                 />
               ))}
