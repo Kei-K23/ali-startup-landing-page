@@ -5,7 +5,7 @@ import Button from "@/components/Button";
 
 export const Header = () => {
   return (
-    <header className="py-4 border-b border-white/15 md:border-none">
+    <header className="py-4 border-b border-white/15 md:border-none sticky top-0 z-10">
       <div className="container">
         <div className="flex justify-between items-center md:border md:border-white/15 md:p-2.5 md:rounded-xl mx-auto max-w-2xl">
           <Link
