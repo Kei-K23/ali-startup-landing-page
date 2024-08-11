@@ -1,6 +1,5 @@
 import LogoIcon from "@/assets/logo.svg";
 import MenuIcon from "@/assets/icon-menu.svg";
-import Link from "next/link";
 import Button from "@/components/Button";
 
 export const Header = () => {
