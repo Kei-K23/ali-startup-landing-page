@@ -1,8 +1,8 @@
 "use client";
-import { DotLottiePlayer } from "@dotlottie/react-player";
 import { TABS } from "../../constants";
 import Image from "next/image";
 import productImg from "@/assets/product-image.png";
+import FeatureItem from "@/components/FeatureItem";
 
 export const Features = () => {
   return (
@@ -17,27 +17,12 @@ export const Features = () => {
         </p>
         <div className="mt-10 mb-6 flex flex-col gap-y-2 lg:flex-row lg:items-center lg:justify-between lg:gap-3">
           {TABS.map((tab) => (
-            <div
+            <FeatureItem
               key={tab.title}
-              className="flex-1 border border-white/15 py-2.5 px-3 md:px-5 flex items-center gap-4 md:gap-6 rounded-lg relative"
-            >
-              <div className="size-12 border border-white/10 rounded-lg inline-flex items-center justify-center">
-                <DotLottiePlayer
-                  src={tab.icon}
-                  className="size-6 md:size-8"
-                  autoplay
-                  loop
-                />
-              </div>
-              <span className="text-[14px] md:text-lg font-medium">
-                {tab.title}
-              </span>
-              {tab.isNew && (
-                <span className="absolute top-0 right-0 bg-purple-500 py-[1px] px-2.5 rounded-l-xl text-xs">
-                  New
-                </span>
-              )}
-            </div>
+              title={tab.title}
+              isNew={tab.isNew}
+              icon={tab.icon}
+            />
           ))}
         </div>
         <div className="border border-white/15 p-2.5 rounded-xl">
