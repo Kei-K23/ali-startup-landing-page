@@ -2,15 +2,29 @@
 import Button from "@/components/Button";
 import starBg from "@/assets/stars.png";
 import GlobeContent from "@/components/GlobeContent";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 
 export const Hero = () => {
+  const containerRef = useRef<HTMLDivElement | null>(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start end", "end start"],
+  });
+
+  const backgroundPositionY = useTransform(
+    scrollYProgress,
+    [0, 1],
+    [-300, 300]
+  );
   return (
-    <motion.section
+    <motion.div
+      ref={containerRef}
       id="home"
       className="relative h-[492px] md:h-[800px] flex items-center overflow-hidden [mask-image:linear-gradient(to_bottom,transparent,black_18%,black_90%,transparent)]"
       style={{
         backgroundImage: `url(${starBg.src})`,
+        backgroundPositionY,
       }}
       animate={{
         backgroundPositionX: starBg.width,
@@ -34,6 +48,6 @@ export const Hero = () => {
           <Button>Join waitlist</Button>
         </div>
       </div>
-    </motion.section>
+    </motion.div>
   );
 };

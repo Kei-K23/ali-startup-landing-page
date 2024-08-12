@@ -8,7 +8,7 @@ import avatar2 from "@/assets/avatar-2.png";
 import avatar3 from "@/assets/avatar-3.png";
 import avatar4 from "@/assets/avatar-4.png";
 
-export const LOGOS = [acmeLogo, pulseLogo, echoLogo, celestialLogo, quantumLogo]
+export const LOGOS = [acmeLogo, pulseLogo, echoLogo, celestialLogo, quantumLogo, acmeLogo, pulseLogo, echoLogo, celestialLogo, quantumLogo]
 
 export const TABS = [
     {
