@@ -31,7 +31,7 @@ export const Hero = () => {
       }}
       transition={{
         repeat: Infinity,
-        duration: 120,
+        duration: 100,
         ease: "linear",
       }}
     >
