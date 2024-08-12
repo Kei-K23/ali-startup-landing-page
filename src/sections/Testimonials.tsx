@@ -1,5 +1,8 @@
+"use client";
+
 import { TESTIMONIALS } from "../../constants";
 import TestimonialCard from "@/components/TestimonialCard";
+import { motion } from "framer-motion";
 
 export const Testimonials = () => {
   return (
@@ -12,9 +15,22 @@ export const Testimonials = () => {
           Our revolutionary AI model and tools have transformed our client
           strategies.
         </p>
-        <div className="mt-10 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_20%,black_80%,transparent)]">
-          <div className="flex gap-5 ">
-            {TESTIMONIALS.map((testimonial) => (
+        <div className="flex mt-10 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_20%,black_80%,transparent)]">
+          <motion.div
+            initial={{
+              translateX: "-50%",
+            }}
+            animate={{
+              translateX: 0,
+            }}
+            transition={{
+              repeat: Infinity,
+              ease: "linear",
+              duration: 30,
+            }}
+            className="flex gap-5 flex-none pr-5 -translate-x-1/2"
+          >
+            {[...TESTIMONIALS, ...TESTIMONIALS].map((testimonial) => (
               <TestimonialCard
                 key={testimonial.text}
                 text={testimonial.text}
@@ -23,7 +39,7 @@ export const Testimonials = () => {
                 title={testimonial.title}
               />
             ))}
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
