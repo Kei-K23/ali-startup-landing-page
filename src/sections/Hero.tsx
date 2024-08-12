@@ -1,14 +1,24 @@
+"use client";
 import Button from "@/components/Button";
 import starBg from "@/assets/stars.png";
 import GlobeContent from "@/components/GlobeContent";
+import { motion } from "framer-motion";
 
 export const Hero = () => {
   return (
-    <section
+    <motion.section
       id="home"
       className="relative h-[492px] md:h-[800px] flex items-center overflow-hidden [mask-image:linear-gradient(to_bottom,transparent,black_18%,black_90%,transparent)]"
       style={{
         backgroundImage: `url(${starBg.src})`,
+      }}
+      animate={{
+        backgroundPositionX: starBg.width,
+      }}
+      transition={{
+        repeat: Infinity,
+        duration: 120,
+        ease: "linear",
       }}
     >
       <GlobeContent />
@@ -24,6 +34,6 @@ export const Hero = () => {
           <Button>Join waitlist</Button>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
